@@ -22,24 +22,24 @@ const client = new Client({
 
 function dropTables() {
   // DROP any exiting tables
-  client.query('DROP TABLE IF EXISTS MCU_Movies CASCADE;');
-  client.query('DROP TABLE IF EXISTS MCU_Actors CASCADE;');
-  client.query('DROP TABLE IF EXISTS MCU_Movies_Actors;');
+  client.query('DROP TABLE IF EXISTS Movies CASCADE;');
+  client.query('DROP TABLE IF EXISTS Actors CASCADE;');
+  client.query('DROP TABLE IF EXISTS Relations;');
 }
 
 function createTables() {
-  client.query('CREATE TABLE MCU_Movies(Movie_id numeric PRIMARY KEY, Movie varchar,\
-    Directed_by varchar, Rating numeric, Run_Time varchar, Box_Office varchar);');
-  client.query("COPY MCU_Movies FROM 'mcu-movies.csv' DELIMITERS ',' CSV;");
+  client.query('CREATE TABLE Movies(ID numeric PRIMARY KEY, Movie varchar,\
+    Director varchar, Rating numeric, Run_Time varchar, Box_Office varchar, Year numeric);');
+  client.query("COPY Movies FROM 'mcu-movies.csv' DELIMITERS ',' CSV;");
 
-  client.query('CREATE TABLE MCU_Actors(Actor_id numeric PRIMARY KEY, Actor varchar,\
-    Age numeric, Networth varchar, Character_Played varchar);');
-  client.query("COPY MCU_Actors FROM 'mcu-actors.csv' DELIMITERS ',' CSV;");
+  client.query('CREATE TABLE Actors(ID numeric PRIMARY KEY, Actor varchar,\
+    Age numeric, Networth varchar, Alias varchar);');
+  client.query("COPY Actors FROM 'mcu-actors.csv' DELIMITERS ',' CSV;");
 
-  client.query('CREATE TABLE MCU_Movies_Actors(Movie_id numeric, Actor_id numeric,\
-    FOREIGN KEY(Movie_id) REFERENCES MCU_Movies(Movie_id) ON UPDATE CASCADE ON DELETE CASCADE,\
-    FOREIGN KEY(Actor_id) REFERENCES MCU_Actors(Actor_id) ON UPDATE CASCADE ON DELETE CASCADE)');
-  client.query("COPY MCU_Movies_Actors FROM 'mcu-movies-actors.csv' DELIMITERS ',' CSV;");
+  client.query('CREATE TABLE Relations(Movie_id numeric, Actor_id numeric,\
+    FOREIGN KEY(Movie_id) REFERENCES Movies(ID) ON UPDATE CASCADE ON DELETE CASCADE,\
+    FOREIGN KEY(Actor_id) REFERENCES Actors(ID) ON UPDATE CASCADE ON DELETE CASCADE)');
+  client.query("COPY Relations FROM 'mcu-movies-actors.csv' DELIMITERS ',' CSV;");
 }
 
 client.connect()
@@ -50,7 +50,7 @@ client.connect()
   .then(() => {
     createTables();
   })
-  .then(() => client.query('select * from MCU_Movies_Actors;'))
+  .then(() => client.query('select * from Relations;'))
   .then((res) => {
     console.table(res.rows);
   })
