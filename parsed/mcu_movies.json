@@ -1,0 +1,182 @@
+[
+    {
+        "Movie": "Iron Man",
+        "Rating": "7.9",
+        "Directed by": "Jon Favreau",
+        "Starring": "Robert Downey Jr., Terrence Howard, Jeff Bridges, Shaun Toub, Gwyneth Paltrow",
+        "Running time": "126 minutes",
+        "Budget": "$140 million",
+        "Box office": "$585.2 million"
+    },
+    {
+        "Movie": "The Incredible Hulk",
+        "Rating": "6.7",
+        "Directed by": "Louis Leterrier",
+        "Starring": "Edward Norton, Liv Tyler, Tim Roth, Tim Blake Nelson, Ty Burrell, William Hurt",
+        "Running time": "112 minutes",
+        "Budget": "$150 million",
+        "Box office": "$263.4 million"
+    },
+    {
+        "Movie": "Iron Man 2",
+        "Rating": "7",
+        "Directed by": "Jon Favreau",
+        "Starring": "Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson, Sam Rockwell, Mickey Rourke, Samuel L. Jackson",
+        "Running time": "125 minutes",
+        "Budget": "$200 million",
+        "Box office": "$623.9 million"
+    },
+    {
+        "Movie": "Thor",
+        "Rating": "7",
+        "Directed by": "Kenneth Branagh",
+        "Starring": "Chris Hemsworth, Natalie Portman, Tom Hiddleston, Stellan Skarsgård, Colm Feore, Ray Stevenson, Idris Elba, Kat Dennings, Rene Russo, Anthony Hopkins",
+        "Running time": "114 minutes",
+        "Budget": "$150 million",
+        "Box office": "$449.3 million"
+    },
+    {
+        "Movie": "Captain America: The First Avenger",
+        "Rating": "6.9",
+        "Directed by": "Joe Johnston",
+        "Starring": "Chris Evans, Tommy Lee Jones, Hugo Weaving, Hayley Atwell, Sebastian Stan, Dominic Cooper, Neal Mc, Donough, Derek Luke, Stanley Tucci",
+        "Running time": "124 minutes",
+        "Budget": "$140–216.7 million",
+        "Box office": "$370.6 million"
+    },
+    {
+        "Movie": "The Avengers",
+        "Rating": "8",
+        "Directed by": "Joss Whedon",
+        "Starring": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Tom Hiddleston, Clark Gregg, Cobie Smulders, Stellan Skarsgård, Samuel L. Jackson",
+        "Running time": "143 minutes",
+        "Budget": "$220 million",
+        "Box office": "$1.519 billion"
+    },
+    {
+        "Movie": "Iron Man 3",
+        "Rating": "7.2",
+        "Directed by": "Shane Black",
+        "Starring": "Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Guy Pearce, Rebecca Hall, Stéphanie Szostak, James Badge Dale, Jon Favreau, Ben Kingsley",
+        "Running time": "131 minutes",
+        "Budget": "$200 million",
+        "Box office": "$1.215 billion"
+    },
+    {
+        "Movie": "Thor: The Dark World",
+        "Rating": "6.9",
+        "Directed by": "Alan Taylor",
+        "Starring": "Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins, Stellan Skarsgård, Idris Elba, Christopher Eccleston, Adewale Akinnuoye-Agbaje, Kat Dennings, Ray Stevenson, Zachary Levi, Tadanobu Asano, Jaimie Alexander, Rene Russo",
+        "Running time": "112 minutes",
+        "Budget": "$170-272 million, $152.7 million",
+        "Box office": "$644.6 million"
+    },
+    {
+        "Movie": "Captain America: The Winter Soldier",
+        "Rating": "7.8",
+        "Directed by": "Anthony Russo, Joe Russo",
+        "Starring": "Chris Evans, Scarlett Johansson, Sebastian Stan, Anthony Mackie, Cobie Smulders, Frank Grillo, Emily Van, Camp, Hayley Atwell, Robert Redford, Samuel L. Jackson",
+        "Running time": "136 minutes",
+        "Budget": "$177 million",
+        "Box office": "$714.3 million"
+    },
+    {
+        "Movie": "Guardians of the Galaxy",
+        "Rating": "8",
+        "Directed by": "James Gunn",
+        "Starring": "Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Lee Pace, Michael Rooker, Karen Gillan, Djimon Hounsou, John C. Reilly, Glenn Close, Benicio del Toro",
+        "Running time": "122 minutes",
+        "Budget": "$232.3 million, $195.9 million",
+        "Box office": "$773.3 million"
+    },
+    {
+        "Movie": "Avengers: Age of Ultron",
+        "Rating": "7.3",
+        "Directed by": "Joss Whedon",
+        "Starring": "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans, Scarlett Johansson, Jeremy Renner, Don Cheadle, Aaron Taylor-Johnson, Elizabeth Olsen, Paul Bettany, Cobie Smulders, Anthony Mackie, Hayley Atwell, Idris Elba, Stellan Skarsgård, James Spader, Samuel L. Jackson",
+        "Running time": "141 minutes",
+        "Budget": "$444-495.2 million, $365.5 million",
+        "Box office": "$1.405 billion"
+    },
+    {
+        "Movie": "Ant-Man",
+        "Rating": "7.3",
+        "Directed by": "Peyton Reed",
+        "Starring": "Paul Rudd, Evangeline Lilly, Corey Stoll, Bobby Cannavale, Michael Peña, Tip \"T.I.\" Harris, Anthony Mackie, Wood Harris, Judy Greer, David Dastmalchian, Michael Douglas",
+        "Running time": "117 minutes",
+        "Budget": "$130–169.3 million",
+        "Box office": "$519.3 million"
+    },
+    {
+        "Movie": "Captain America: Civil War",
+        "Rating": "7.8",
+        "Directed by": "Anthony Russo, Joe Russo",
+        "Starring": "Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner, Chadwick Boseman, Paul Bettany, Elizabeth Olsen, Paul Rudd, Emily Van, Camp, Tom Holland, Frank Grillo, William Hurt, Daniel Brühl",
+        "Running time": "147 minutes",
+        "Budget": "$250 million, $230 million",
+        "Box office": "$1.153 billion"
+    },
+    {
+        "Movie": "Doctor Strange",
+        "Rating": "7.5",
+        "Directed by": "Scott Derrickson",
+        "Starring": "Benedict Cumberbatch, Chiwetel Ejiofor, Rachel Mc, Adams, Benedict Wong, Michael Stuhlbarg, Benjamin Bratt, Scott Adkins, Mads Mikkelsen, Tilda Swinton",
+        "Running time": "115 minutes",
+        "Budget": "$165–236.6 million",
+        "Box office": "$677.7 million"
+    },
+    {
+        "Movie": "Guardians of the Galaxy Vol. 2",
+        "Rating": "7.6",
+        "Directed by": "James Gunn",
+        "Starring": "Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Michael Rooker, Karen Gillan, Pom Klementieff, Elizabeth Debicki, Chris Sullivan, Sean Gunn, Sylvester Stallone, Kurt Russell",
+        "Running time": "137 minutes",
+        "Budget": "$200 million",
+        "Box office": "$863.8 million"
+    },
+    {
+        "Movie": "Spider-Man: Homecoming",
+        "Rating": "7.4",
+        "Directed by": "Jon Watts",
+        "Starring": "Tom Holland, Michael Keaton, Jon Favreau, Zendaya, Donald Glover, Tyne Daly, Marisa Tomei, Robert Downey Jr.",
+        "Running time": "133 minutes",
+        "Budget": "$175 million",
+        "Box office": "$880.2 million"
+    },
+    {
+        "Movie": "Thor: Ragnarok",
+        "Rating": "7.9",
+        "Directed by": "Taika Waititi",
+        "Starring": "Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba, Jeff Goldblum, Tessa Thompson, Karl Urban, Mark Ruffalo, Anthony Hopkins",
+        "Running time": "130 minutes",
+        "Budget": "$180 million",
+        "Box office": "$854 million"
+    },
+    {
+        "Movie": "Black Panther",
+        "Rating": "7.3",
+        "Directed by": "Ryan Coogler",
+        "Starring": "Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira, Martin Freeman, Daniel Kaluuya, Letitia Wright, Winston Duke, Angela Bassett, Forest Whitaker, Andy Serkis",
+        "Running time": "134 minutes",
+        "Budget": "$200–210 million",
+        "Box office": "$1.347 billion"
+    },
+    {
+        "Movie": "Avengers: Infinity War",
+        "Rating": "8.5",
+        "Directed by": "Anthony Russo Joe Russo",
+        "Starring": "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans, Scarlett Johansson, Benedict Cumberbatch, Don Cheadle, Tom Holland, Chadwick Boseman, Paul Bettany, Elizabeth Olsen, Anthony Mackie, Sebastian Stan, Danai Gurira, Letitia Wright, Dave Bautista, Zoe Saldana, Josh Brolin, Chris Pratt",
+        "Running time": "149 minutes",
+        "Budget": "$316–400 million",
+        "Box office": "$2.049 billion"
+    },
+    {
+        "Movie": "Ant-Man and the Wasp",
+        "Rating": "7.1",
+        "Directed by": "Peyton Reed",
+        "Starring": "Paul Rudd, Evangeline Lilly, Michael Peña, Walton Goggins, Bobby Cannavale, Judy Greer, Tip \"T.I.\" Harris, David Dastmalchian, Hannah John-Kamen, Abby Ryder Fortson, Randall Park, Michelle Pfeiffer, Laurence Fishburne, Michael Douglas",
+        "Running time": "118 minutes",
+        "Budget": "$162–195 million",
+        "Box office": "$622.7 million"
+    }
+]
