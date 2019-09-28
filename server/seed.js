@@ -28,15 +28,15 @@ function dropTables() {
 }
 
 function createTables() {
-  client.query('CREATE TABLE Movies(ID numeric PRIMARY KEY, Movie varchar,\
+  client.query('CREATE TABLE Movies(ID serial PRIMARY KEY, Movie varchar,\
     Director varchar, Rating numeric, Run_Time varchar, Box_Office varchar, Year numeric);');
-  client.query("COPY Movies FROM 'mcu-movies.csv' DELIMITERS ',' CSV;");
+  client.query("COPY Movies(Movie, Director, Rating, Run_Time, Box_Office, Year) FROM 'mcu-movies.csv' DELIMITERS ',' CSV;");
 
-  client.query('CREATE TABLE Actors(ID numeric PRIMARY KEY, Actor varchar,\
+  client.query('CREATE TABLE Actors(ID serial PRIMARY KEY, Actor varchar,\
     Age numeric, Networth varchar, Alias varchar);');
-  client.query("COPY Actors FROM 'mcu-actors.csv' DELIMITERS ',' CSV;");
+  client.query("COPY Actors(Actor, Age, Networth, Alias) FROM 'mcu-actors.csv' DELIMITERS ',' CSV;");
 
-  client.query('CREATE TABLE Relations(Movie_id numeric, Actor_id numeric,\
+  client.query('CREATE TABLE Relations(Movie_id serial, Actor_id serial,\
     FOREIGN KEY(Movie_id) REFERENCES Movies(ID) ON UPDATE CASCADE ON DELETE CASCADE,\
     FOREIGN KEY(Actor_id) REFERENCES Actors(ID) ON UPDATE CASCADE ON DELETE CASCADE)');
   client.query("COPY Relations FROM 'mcu-movies-actors.csv' DELIMITERS ',' CSV;");
