@@ -13,6 +13,7 @@ const client = new Client({
 client.connect()
   .then(() => console.log('DB connected'))
   .catch((err) => console.log(err));
+
 module.exports = {
 
   // Actors GET
@@ -39,8 +40,16 @@ module.exports = {
   // Actors POST
   postActor(params) {
     return client.query('insert into actors(actor, age, networth, alias)\
-    values($1, $2, $3, $4);', [params.aname, params.age, params.networth, params.alias])
-      .then(() => (client.query('select * from actors where actor=$1', [params.aname])));
+    values($1, $2, $3, $4) returning *;', [params.aname, params.age, params.networth, params.alias]);
+  },
+  // Actors PUT
+  putActor(params, id) {
+    let toSet = '';
+    const columns = Object.keys(params);
+    columns.forEach((column) => {
+      toSet += `${column} = ${params[column]},`;
+    });
+    return client.query(`update actors set ${toSet.slice(0, toSet.length - 1)} where id = ${id} returning *;`);
   },
 
   // Movies GET
@@ -73,11 +82,27 @@ module.exports = {
   // Movies POST
   postMovie(params) {
     return client.query('insert into movies(movie, director, rating, run_time, box_office, year)\
-    values($1, $2, $3, $4, $5, $6);', [params.mname, params.director, params.rating, params.runtime, params.boxoffice, params.year])
-      .then(() => (client.query('select * from movies where movie=$1', [params.mname])));
+    values($1, $2, $3, $4, $5, $6) returning *;', [params.mname, params.director, params.rating, params.runtime, params.boxoffice, params.year]);
+  },
+  // Movies PUT
+  putMovie(params, id) {
+    let toSet = '';
+    const columns = Object.keys(params);
+    columns.forEach((column) => {
+      toSet += `${column} = ${params[column]},`;
+    });
+    return client.query(`update movies set ${toSet.slice(0, toSet.length - 1)} where id = ${id} returning *;`);
   },
 
   // Relations GET
+  getMovieActors(mName) {
+    return client.query('select actor from actors as a, relations as r where a.id = r.actor_id and \
+    r.movie_id = (select id from movies where movie = $1);', [mName]);
+  },
+  getActorMovies(aName) {
+    return client.query('select movie from movies as m, relations as r where m.id = r.movie_id and \
+    r.actor_id = (select id from actors where actor = $1);', [aName]);
+  },
   getRelations() {
     return client.query('select movie,actor from movies as m,actors as a,\
     relations as r where m.id=r.movie_id and a.id=r.actor_id;');

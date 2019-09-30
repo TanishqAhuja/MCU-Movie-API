@@ -54,5 +54,5 @@ client.connect()
   .then((res) => {
     console.table(res.rows);
   })
-  .catch((err) => console.log(err));
-// .finally(() => client.end());
+  .catch((err) => console.log(err))
+  .finally(() => client.end());
