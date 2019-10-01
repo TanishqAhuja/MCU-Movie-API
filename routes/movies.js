@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('../server/queryFunctions');
+const db = require('../server/db/movies');
 
 const router = express.Router();
 
