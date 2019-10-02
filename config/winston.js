@@ -23,16 +23,10 @@ const logger = createLogger({
   ],
   format: format.combine(
     format.simple(),
-    format.timestamp(),
+    format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     format.printf((info) => `[${info.timestamp}] => ${info.message}`),
   ),
   exitOnError: false,
 });
-
-logger.stream = {
-  write(message, encoding) {
-    logger.info(message);
-  },
-};
 
 module.exports = logger;

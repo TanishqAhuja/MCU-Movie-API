@@ -55,7 +55,7 @@ router.put('/', (req, res) => {
 });
 
 // Relational GET
-router.get('/actors/:mname', (req, res) => {
+router.get('/:mname/actors', (req, res) => {
   db.getMovieActors(req.params.mname)
     .then((resolve) => res.send(resolve.rows));
 });

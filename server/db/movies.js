@@ -1,5 +1,8 @@
 /* eslint-disable no-multi-str */
+const joi = require('joi');
 const { client } = require('./credentials');
+const validation = require('../../config/validation');
+const logger = require('../../config/winston');
 
 module.exports = {
   // Movies GET
@@ -33,12 +36,18 @@ module.exports = {
 
   // Movies POST
   postMovie(params) {
+    const result = joi.validate(params, validation.movieSchema);
+    logger.info(JSON.stringify(result));
     return client.query('insert into movies(movie, director, rating, run_time, box_office, year)\
     values($1, $2, $3, $4, $5, $6) returning *;', [params.mname, params.director, params.rating, params.runtime, params.boxoffice, params.year]);
   },
 
   // Movies PUT
   putMovie(params, id) {
+    const result1 = joi.validate(params, validation.movieSchema);
+    logger.info(JSON.stringify(result1));
+    const result2 = joi.validate(id, validation.idSchema);
+    logger.info(JSON.stringify(result2));
     let toSet = '';
     const columns = Object.keys(params);
     columns.forEach((column) => {
