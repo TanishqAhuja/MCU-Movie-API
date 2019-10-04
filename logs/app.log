@@ -519,5 +519,10 @@
 [2019-10-04 07:44:35] => DataBase connected
 [2019-10-04 08:17:22] => Listening on port 3000...
 [2019-10-04 08:17:22] => DataBase connected
+<<<<<<< HEAD
 [2019-10-04 08:24:57] => Listening on port 3000...
 [2019-10-04 08:24:57] => DataBase connected
+=======
+>>>>>>> bd56ce2b5ad71fc086d49cb7549039a4bb416f0e
+[2019-10-04 08:29:14] => Listening on port 3000...
+[2019-10-04 08:29:14] => DataBase connected
