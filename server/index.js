@@ -12,13 +12,11 @@ app.use((req, res, next) => {
 
 app.use(require('../routes'));
 
-app.use((req, res, err) => {
-  console.log(err);
-});
-
-app.use((err, res) => {
+app.use('*', (err, res) => {
   if (err) {
-    res.status(404).send('Not found');
+    res.status(404).json({
+      message: 'requested URL not found!!',
+    });
   }
 });
 

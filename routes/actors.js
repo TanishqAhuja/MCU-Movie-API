@@ -15,8 +15,8 @@ router.use(express.urlencoded({ extended: false }));
 // Actors GET
 router.get('/', (req, res, next) => {
   db.getActors()
-    .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .then((resolve) => res.send(resolve.rows));
+  // .catch(next());
 });
 router.get('/:aname', (req, res, next) => {
   db.getActor(req.params.aname)
