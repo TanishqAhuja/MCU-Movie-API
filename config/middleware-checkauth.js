@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
   try {
-    const decoded = jwt.verify(req.body.token, 'ABCD_efgh_XYZ');
+    const decoded = jwt.verify(req.headers.authorization, 'ABCD_efgh_XYZ');
     req.userData = decoded;
     next();
   } catch (err) {

@@ -38,12 +38,17 @@ module.exports = {
     columns.forEach((column) => {
       toSet += `${column} = '${params[column]}',`;
     });
-    return client.query('update actors set $1 where id = $2 returning *;', [toSet.slice(0, toSet.length - 1), id]);
+    return client.query(`update actors set ${toSet.slice(0, toSet.length - 1)} where id = $1 returning *;`, [id]);
   },
 
   // Relations GET
   getActorMovies(aName) {
     return client.query('select movie from movies as m, relations as r where m.id = r.movie_id and \
     r.actor_id = (select id from actors where actor = $1);', [aName]);
+  },
+
+  // check id exists
+  ifExists(id) {
+    return client.query('select exists(select 1 from actors where id = $1);', [id]);
   },
 };
