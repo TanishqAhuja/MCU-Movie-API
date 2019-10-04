@@ -1,8 +1,5 @@
 /* eslint-disable no-multi-str */
-const joi = require('joi');
 const { client } = require('./credentials');
-const validation = require('../../config/validation');
-const logger = require('../../config/winston');
 
 module.exports = {
   // Actors GET
@@ -30,24 +27,18 @@ module.exports = {
 
   // Actors POST
   postActor(params) {
-    const result = joi.validate(params, validation.actorSchema);
-    logger.info(JSON.stringify(result));
     return client.query('insert into actors(actor, age, networth, alias)\
-    values($1, $2, $3, $4) returning *;', [params.aname, params.age, params.networth, params.alias]);
+    values($1, $2, $3, $4) returning *;', [params.actor, params.age, params.networth, params.alias]);
   },
 
   // Actors PUT
   putActor(params, id) {
-    const result1 = joi.validate(params, validation.actorSchema);
-    logger.info(JSON.stringify(result1));
-    const result2 = joi.validate(id, validation.idSchema);
-    logger.info(JSON.stringify(result2));
     let toSet = '';
     const columns = Object.keys(params);
     columns.forEach((column) => {
-      toSet += `${column} = ${params[column]},`;
+      toSet += `${column} = '${params[column]}',`;
     });
-    return client.query(`update actors set ${toSet.slice(0, toSet.length - 1)} where id = ${id} returning *;`);
+    return client.query('update actors set $1 where id = $2 returning *;', [toSet.slice(0, toSet.length - 1), id]);
   },
 
   // Relations GET

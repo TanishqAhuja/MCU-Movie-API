@@ -1,16 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-multi-str */
-// const fs = require('fs');
-// const c2j = require('csvtojson');
+
 const { Client } = require('pg');
-
-// c2j()
-//     .fromFile('./CSV data/mcu_networth.csv')
-//     .then((jsonObj) => {
-//         const jsonStr = JSON.stringify(jsonObj);
-//         fs.writeFileSync('./parsed/mcu_networth.json', jsonStr);
-//     });
-
 
 const client = new Client({
   user: 'postgres',
@@ -25,6 +16,7 @@ function dropTables() {
   client.query('DROP TABLE IF EXISTS Movies CASCADE;');
   client.query('DROP TABLE IF EXISTS Actors CASCADE;');
   client.query('DROP TABLE IF EXISTS Relations;');
+  client.query('DROP TABLE IF EXISTS Users;');
 }
 
 function createTables() {
@@ -40,6 +32,9 @@ function createTables() {
     FOREIGN KEY(Movie_id) REFERENCES Movies(ID) ON UPDATE CASCADE ON DELETE CASCADE,\
     FOREIGN KEY(Actor_id) REFERENCES Actors(ID) ON UPDATE CASCADE ON DELETE CASCADE)');
   client.query("COPY Relations FROM 'mcu-movies-actors.csv' DELIMITERS ',' CSV;");
+
+  client.query('CREATE TABLE Users(ID serial PRIMARY KEY, Email varchar,\
+    Username varchar,Password varchar);');
 }
 
 client.connect()

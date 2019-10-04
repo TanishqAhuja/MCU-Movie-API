@@ -1,5 +1,9 @@
 const express = require('express');
+const joi = require('joi');
 const db = require('../server/db/actors');
+const validation = require('../config/validation');
+const logger = require('../config/winston');
+const checkAuth = require('../config/middleware-checkauth');
 
 const router = express.Router();
 
@@ -29,21 +33,35 @@ router.get('/alias/:aname', (req, res) => {
 });
 
 // Actors DELETE
-router.delete('/:aname', (req, res) => {
+router.delete('/:aname', checkAuth, (req, res) => {
   db.deleteActor(req.params.aname)
     .then((resolve) => res.send(resolve.rows));
 });
 
 // Actors POST
-router.post('/', (req, res) => {
+router.post('/', checkAuth, (req, res) => {
+  const result = joi.validate(req.body, validation.postActorSchema);
+  logger.info(JSON.stringify(result));
   db.postActor(req.body)
     .then((resolve) => res.send(resolve.rows));
 });
 
 // Actor PUT
-router.put('/', (req, res) => {
-  db.putActor(req.body, 2)
-    .then((resolve) => res.send(resolve.rows));
+router.put('/:id', checkAuth, (req, res) => {
+  joi.validate(req.body, validation.putActorSchema, (err, value) => {
+    if (err) {
+      res.status(422).send(err.details[0].message);
+    } else {
+      joi.validate(req.params.id, validation.idSchema, (err, value) => {
+        if (err) {
+          res.status(400).send(err.details[0].message);
+        } else {
+          db.putActor(req.body, req.params.id)
+            .then((resolve) => res.send(resolve.rows));
+        }
+      });
+    }
+  });
 });
 
 // Relational GET
