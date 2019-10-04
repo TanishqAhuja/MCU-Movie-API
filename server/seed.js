@@ -4,7 +4,6 @@
 const { Client } = require('pg');
 
 const client = new Client({
-<<<<<<< HEAD
   // connectionString: process.env.DATABASE_URL,
   ssl: true,
   user: 'cufbpucqlmzodu',
@@ -12,15 +11,6 @@ const client = new Client({
   database: 'd75rptttn0e2pa',
   password: 'd85005a22111e020c5ac443bbaf621de67a27919c5f1a9acfef554ca001bc7ad',
   port: 5432,
-=======
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-  // user: 'cufbpucqlmzodu',
-  // host: 'ec2-107-20-168-237.compute-1.amazonaws.com',
-  // database: 'd75rptttn0e2pa',
-  // password: 'd85005a22111e020c5ac443bbaf621de67a27919c5f1a9acfef554ca001bc7ad',
-  // port: 5432,
->>>>>>> bd56ce2b5ad71fc086d49cb7549039a4bb416f0e
   // URI: 'postgres://cufbpucqlmzodu:d85005a22111e020c5ac443bbaf621de67a27919c5f1a9acfef554ca001bc7ad@ec2-107-20-168-237.compute-1.amazonaws.com:5432/d75rptttn0e2pa',
 });
 
