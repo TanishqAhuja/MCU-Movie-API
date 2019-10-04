@@ -1,20 +1,21 @@
-1,Iron Man,Jon Favreau,7.9,126 minutes,$585.2 million
-2,The Incredible Hulk,Louis Leterrier,6.7,112 minutes,$263.4 million
-3,Iron Man 2,Jon Favreau,7,125 minutes,$623.9 million
-4,Thor,Kenneth Branagh,7,114 minutes,$449.3 million
-5,Captain America: The First Avenger,Joe Johnston,6.9,124 minutes,$370.6 million
-6,The Avengers,Joss Whedon,8,143 minutes,$1.519 billion
-7,Iron Man 3,Shane Black,7.2,131 minutes,$1.215 billion
-8,Thor: The Dark World,Alan Taylor,6.9,112 minutes,$644.6 million
-9,Captain America: The Winter Soldier,"Anthony Russo, Joe Russo",7.8,136 minutes,$714.3 million
-10,Guardians of the Galaxy,James Gunn,8,122 minutes,$773.3 million
-11,Avengers: Age of Ultron,Joss Whedon,7.3,141 minutes,$1.405 billion
-12,Ant-Man,Peyton Reed,7.3,117 minutes,$519.3 million
-13,Captain America: Civil War,"Anthony Russo, Joe Russo",7.8,147 minutes,$1.153 billion
-14,Doctor Strange,Scott Derrickson,7.5,115 minutes,$677.7 million
-15,Guardians of the Galaxy Vol. 2,James Gunn,7.6,137 minutes,$863.8 million
-16,Spider-Man: Homecoming,Jon Watts,7.4,133 minutes,$880.2 million
-17,Thor: Ragnarok,Taika Waititi,7.9,130 minutes,$854 million
-18,Black Panther,Ryan Coogler,7.3,134 minutes,$1.347 billion
-19,Avengers: Infinity War,Anthony Russo Joe Russo,8.5,149 minutes,$2.049 billion
-20,Ant-Man and the Wasp,Peyton Reed,7.1,118 minutes,$622.7 million
+Movie,Director,Rating,Runtime,BoxOffice,Year
+Iron Man,Jon Favreau,7.9,126 minutes,$585.2 million,2008
+The Incredible Hulk,Louis Leterrier,6.7,112 minutes,$263.4 million,2008
+Iron Man 2,Jon Favreau,7,125 minutes,$623.9 million,2010
+Thor,Kenneth Branagh,7,114 minutes,$449.3 million,2011
+Captain America: The First Avenger,Joe Johnston,6.9,124 minutes,$370.6 million,2011
+The Avengers,Joss Whedon,8,143 minutes,$1.519 billion,2012
+Iron Man 3,Shane Black,7.2,131 minutes,$1.215 billion,2013
+Thor: The Dark World,Alan Taylor,6.9,112 minutes,$644.6 million,2013
+Captain America: The Winter Soldier,"Anthony Russo, Joe Russo",7.8,136 minutes,$714.3 million,2014
+Guardians of the Galaxy,James Gunn,8,122 minutes,$773.3 million,2014
+Avengers: Age of Ultron,Joss Whedon,7.3,141 minutes,$1.405 billion,2015
+Ant-Man,Peyton Reed,7.3,117 minutes,$519.3 million,2015
+Captain America: Civil War,"Anthony Russo, Joe Russo",7.8,147 minutes,$1.153 billion,2016
+Doctor Strange,Scott Derrickson,7.5,115 minutes,$677.7 million,2016
+Guardians of the Galaxy Vol. 2,James Gunn,7.6,137 minutes,$863.8 million,2017
+Spider-Man: Homecoming,Jon Watts,7.4,133 minutes,$880.2 million,2017
+Thor: Ragnarok,Taika Waititi,7.9,130 minutes,$854 million,2017
+Black Panther,Ryan Coogler,7.3,134 minutes,$1.347 billion,2018
+Avengers: Infinity War,Anthony Russo Joe Russo,8.5,149 minutes,$2.049 billion,2018
+Ant-Man and the Wasp,Peyton Reed,7.1,118 minutes,$622.7 million,2018

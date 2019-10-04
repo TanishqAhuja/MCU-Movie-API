@@ -11,4 +11,4 @@ app.use((req, res, next) => {
 
 app.use(require('../routes'));
 
-app.listen(port, () => logger.info(`Listening on port ${port}...`));
+app.listen((process.env.PORT || port), () => logger.info(`Listening on port ${port}...`));

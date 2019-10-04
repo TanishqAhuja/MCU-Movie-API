@@ -1,0 +1,128 @@
+[
+    {
+        "Actor": "Robert Downey Jr.",
+        "Age": "54",
+        "Networth": "$300 million",
+        "Alias": "Iron Man"
+    },
+    {
+        "Actor": "Gwyneth Paltrow",
+        "Age": "46",
+        "Networth": "$140 million",
+        "Alias": "Pepper Potts"
+    },
+    {
+        "Actor": "Scarlett Johansson",
+        "Age": "34",
+        "Networth": "$140 million",
+        "Alias": "Black Widow"
+    },
+    {
+        "Actor": "Samuel L. Jackson",
+        "Age": "70",
+        "Networth": "$220 million",
+        "Alias": "Nick Fury"
+    },
+    {
+        "Actor": "Chris Hemsworth",
+        "Age": "36",
+        "Networth": "$90 million",
+        "Alias": "Thor"
+    },
+    {
+        "Actor": "Natalie Portman",
+        "Age": "38",
+        "Networth": "$60 million",
+        "Alias": "Jane Foster"
+    },
+    {
+        "Actor": "Tom Hiddleston",
+        "Age": "38",
+        "Networth": "$20 million",
+        "Alias": "Loki"
+    },
+    {
+        "Actor": "Chris Evans",
+        "Age": "38",
+        "Networth": "$50 million",
+        "Alias": "Captain America"
+    },
+    {
+        "Actor": "Sebastian Stan",
+        "Age": "37",
+        "Networth": "$4 million",
+        "Alias": "Bucky"
+    },
+    {
+        "Actor": "Mark Ruffalo",
+        "Age": "51",
+        "Networth": "$30 million",
+        "Alias": "HULK"
+    },
+    {
+        "Actor": "Jeremy Renner",
+        "Age": "48",
+        "Networth": "$50 million",
+        "Alias": "Hawkeye"
+    },
+    {
+        "Actor": "Chris Pratt",
+        "Age": "40",
+        "Networth": "$40 million",
+        "Alias": "Starlord"
+    },
+    {
+        "Actor": "Zoe Saldana",
+        "Age": "41",
+        "Networth": "$20 million",
+        "Alias": "Gamora"
+    },
+    {
+        "Actor": "Dave Bautista",
+        "Age": "50",
+        "Networth": "$13 million",
+        "Alias": "Drax"
+    },
+    {
+        "Actor": "Paul Rudd",
+        "Age": "50",
+        "Networth": "$30 million",
+        "Alias": "Ant Man"
+    },
+    {
+        "Actor": "Evangeline Lilly",
+        "Age": "40",
+        "Networth": "$15 million",
+        "Alias": "Wasp"
+    },
+    {
+        "Actor": "Elizabeth Olsen",
+        "Age": "30",
+        "Networth": "$5 million",
+        "Alias": "Scarlett Witch"
+    },
+    {
+        "Actor": "Chadwick Boseman",
+        "Age": "41",
+        "Networth": "$8 million",
+        "Alias": "Black Panther"
+    },
+    {
+        "Actor": "Benedict Cumberbatch",
+        "Age": "43",
+        "Networth": "$30 million",
+        "Alias": "Dr. Strange"
+    },
+    {
+        "Actor": "Tom Holland",
+        "Age": "23",
+        "Networth": "$4 million",
+        "Alias": "Spiderman"
+    },
+    {
+        "Actor": "Zendaya",
+        "Age": "23",
+        "Networth": "$5 million",
+        "Alias": "Mary Jane"
+    }
+]

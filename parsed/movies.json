@@ -1,0 +1,162 @@
+[
+    {
+        "Movie": "Iron Man",
+        "Director": "Jon Favreau",
+        "Rating": "7.9",
+        "Runtime": "126 minutes",
+        "BoxOffice": "$585.2 million",
+        "Year": "2008"
+    },
+    {
+        "Movie": "The Incredible Hulk",
+        "Director": "Louis Leterrier",
+        "Rating": "6.7",
+        "Runtime": "112 minutes",
+        "BoxOffice": "$263.4 million",
+        "Year": "2008"
+    },
+    {
+        "Movie": "Iron Man 2",
+        "Director": "Jon Favreau",
+        "Rating": "7",
+        "Runtime": "125 minutes",
+        "BoxOffice": "$623.9 million",
+        "Year": "2010"
+    },
+    {
+        "Movie": "Thor",
+        "Director": "Kenneth Branagh",
+        "Rating": "7",
+        "Runtime": "114 minutes",
+        "BoxOffice": "$449.3 million",
+        "Year": "2011"
+    },
+    {
+        "Movie": "Captain America: The First Avenger",
+        "Director": "Joe Johnston",
+        "Rating": "6.9",
+        "Runtime": "124 minutes",
+        "BoxOffice": "$370.6 million",
+        "Year": "2011"
+    },
+    {
+        "Movie": "The Avengers",
+        "Director": "Joss Whedon",
+        "Rating": "8",
+        "Runtime": "143 minutes",
+        "BoxOffice": "$1.519 billion",
+        "Year": "2012"
+    },
+    {
+        "Movie": "Iron Man 3",
+        "Director": "Shane Black",
+        "Rating": "7.2",
+        "Runtime": "131 minutes",
+        "BoxOffice": "$1.215 billion",
+        "Year": "2013"
+    },
+    {
+        "Movie": "Thor: The Dark World",
+        "Director": "Alan Taylor",
+        "Rating": "6.9",
+        "Runtime": "112 minutes",
+        "BoxOffice": "$644.6 million",
+        "Year": "2013"
+    },
+    {
+        "Movie": "Captain America: The Winter Soldier",
+        "Director": "Anthony Russo, Joe Russo",
+        "Rating": "7.8",
+        "Runtime": "136 minutes",
+        "BoxOffice": "$714.3 million",
+        "Year": "2014"
+    },
+    {
+        "Movie": "Guardians of the Galaxy",
+        "Director": "James Gunn",
+        "Rating": "8",
+        "Runtime": "122 minutes",
+        "BoxOffice": "$773.3 million",
+        "Year": "2014"
+    },
+    {
+        "Movie": "Avengers: Age of Ultron",
+        "Director": "Joss Whedon",
+        "Rating": "7.3",
+        "Runtime": "141 minutes",
+        "BoxOffice": "$1.405 billion",
+        "Year": "2015"
+    },
+    {
+        "Movie": "Ant-Man",
+        "Director": "Peyton Reed",
+        "Rating": "7.3",
+        "Runtime": "117 minutes",
+        "BoxOffice": "$519.3 million",
+        "Year": "2015"
+    },
+    {
+        "Movie": "Captain America: Civil War",
+        "Director": "Anthony Russo, Joe Russo",
+        "Rating": "7.8",
+        "Runtime": "147 minutes",
+        "BoxOffice": "$1.153 billion",
+        "Year": "2016"
+    },
+    {
+        "Movie": "Doctor Strange",
+        "Director": "Scott Derrickson",
+        "Rating": "7.5",
+        "Runtime": "115 minutes",
+        "BoxOffice": "$677.7 million",
+        "Year": "2016"
+    },
+    {
+        "Movie": "Guardians of the Galaxy Vol. 2",
+        "Director": "James Gunn",
+        "Rating": "7.6",
+        "Runtime": "137 minutes",
+        "BoxOffice": "$863.8 million",
+        "Year": "2017"
+    },
+    {
+        "Movie": "Spider-Man: Homecoming",
+        "Director": "Jon Watts",
+        "Rating": "7.4",
+        "Runtime": "133 minutes",
+        "BoxOffice": "$880.2 million",
+        "Year": "2017"
+    },
+    {
+        "Movie": "Thor: Ragnarok",
+        "Director": "Taika Waititi",
+        "Rating": "7.9",
+        "Runtime": "130 minutes",
+        "BoxOffice": "$854 million",
+        "Year": "2017"
+    },
+    {
+        "Movie": "Black Panther",
+        "Director": "Ryan Coogler",
+        "Rating": "7.3",
+        "Runtime": "134 minutes",
+        "BoxOffice": "$1.347 billion",
+        "Year": "2018"
+    },
+    {
+        "Movie": "Avengers: Infinity War",
+        "Director": "Anthony Russo Joe Russo",
+        "Rating": "8.5",
+        "Runtime": "149 minutes",
+        "BoxOffice": "$2.049 billion",
+        "Year": "2018"
+    },
+    {
+        "Movie": "Ant-Man and the Wasp",
+        "Director": "Peyton Reed",
+        "Rating": "7.1",
+        "Runtime": "118 minutes",
+        "BoxOffice": "$622.7 million",
+        "Year": "2018"
+    }
+]
