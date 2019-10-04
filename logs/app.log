@@ -530,3 +530,14 @@
 [2019-10-04 08:30:53] => DataBase connected
 [2019-10-04 11:47:07] => Listening on port 3000...
 [2019-10-04 11:47:09] => DataBase connected
+[2019-10-04 14:45:14] => Listening on port 3000...
+[2019-10-04 14:45:16] => DataBase connected
+[2019-10-04 14:45:26] => GET ~ /actors
+[2019-10-04 14:45:26] => GET ~ /favicon.ico
+[2019-10-04 14:47:26] => GET ~ /favicon.ico
+[2019-10-04 14:48:10] => POST ~ /login/testaroo
+[2019-10-04 14:48:56] => POST ~ /sadaf
+[2019-10-04 14:56:26] => POST ~ /sadaf
+[2019-10-04 14:59:16] => POST ~ /sadaf
+[2019-10-04 15:00:19] => POST ~ /sadaf
+[2019-10-04 15:03:46] => POST ~ /sadaf

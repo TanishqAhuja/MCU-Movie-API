@@ -52,4 +52,9 @@ module.exports = {
     return client.query('select actor from actors as a, relations as r where a.id = r.actor_id and \
     r.movie_id = (select id from movies where movie = $1);', [mName]);
   },
+
+  // check id exists
+  ifExists(id) {
+    return client.query('select exists(select 1 from movies where id = $1);', [id]);
+  },
 };

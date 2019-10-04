@@ -14,6 +14,9 @@ const client = new Client({
 
 client.connect()
   .then(() => logger.info('DataBase connected'))
-  .catch((err) => logger.info(err));
+  .catch((err) => {
+    logger.error(err);
+    process.exit();
+  });
 
 module.exports = { client };

@@ -1,10 +1,10 @@
+/* eslint-disable no-console */
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
 const express = require('express');
 const joi = require('joi');
 const db = require('../server/db/actors');
 const validation = require('../config/validation');
-const logger = require('../config/winston');
 const checkAuth = require('../config/middleware-checkauth');
 
 const router = express.Router();
@@ -13,47 +13,54 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
 // Actors GET
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
   db.getActors()
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
-router.get('/:aname', (req, res) => {
+router.get('/:aname', (req, res, next) => {
   db.getActor(req.params.aname)
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
-router.get('/networth/:aname', (req, res) => {
+router.get('/networth/:aname', (req, res, next) => {
   db.getNetworth(req.params.aname)
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
-router.get('/age/:aname', (req, res) => {
+router.get('/age/:aname', (req, res, next) => {
   db.getAge(req.params.aname)
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
-router.get('/alias/:aname', (req, res) => {
+router.get('/alias/:aname', (req, res, next) => {
   db.getAlias(req.params.aname)
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
 
 // Actors DELETE
-router.delete('/:aname', checkAuth, (req, res) => {
+router.delete('/:aname', checkAuth, (req, res, next) => {
   db.deleteActor(req.params.aname)
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
 
 // Actors POST
-router.post('/', checkAuth, (req, res) => {
+router.post('/', checkAuth, (req, res, next) => {
   joi.validate(req.body, validation.postActorSchema, (err, value) => {
     if (err) {
       res.status(422).send(err.details[0].message);
     } else {
       db.postActor(req.body)
-        .then((resolve) => res.send(resolve.rows));
+        .then((resolve) => res.send(resolve.rows))
+        .catch(next());
     }
   });
 });
 
 // Actor PUT
-router.put('/:id', checkAuth, (req, res) => {
+router.put('/:id', checkAuth, (req, res, next) => {
   db.ifExists(req.params.id)
     .then((actor) => {
       if (actor.rows[0].exists) {
@@ -67,7 +74,7 @@ router.put('/:id', checkAuth, (req, res) => {
               } else {
                 db.putActor(req.body, req.params.id)
                   .then((resolve) => res.send(resolve.rows))
-                  .catch((error) => console.log(error));
+                  .catch(next());
               }
             });
           }
@@ -78,13 +85,14 @@ router.put('/:id', checkAuth, (req, res) => {
         });
       }
     })
-    .catch((err) => console.log(err));
+    .catch(next());
 });
 
 // Relational GET
-router.get('/:aname/movies', (req, res) => {
+router.get('/:aname/movies', (req, res, next) => {
   db.getActorMovies(req.params.aname)
-    .then((resolve) => res.send(resolve.rows));
+    .then((resolve) => res.send(resolve.rows))
+    .catch(next());
 });
 
 module.exports = router;
