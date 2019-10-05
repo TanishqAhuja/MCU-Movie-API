@@ -8,11 +8,11 @@ const { Client } = require('pg');
 const client = new Client({
   // connectionString: process.env.DATABASE_URL,
   ssl: true,
-  user: 'cufbpucqlmzodu',
-  host: 'ec2-107-20-168-237.compute-1.amazonaws.com',
-  database: 'd75rptttn0e2pa',
-  password: 'd85005a22111e020c5ac443bbaf621de67a27919c5f1a9acfef554ca001bc7ad',
+  host: 'ec2-54-221-244-70.compute-1.amazonaws.com',
+  database: 'dc58ielo93ahkv',
+  user: 'nvvpzceoeqvjsw',
   port: 5432,
+  password: '5b575f2054ab310fbc6cfeb18bd2e81672d1f7ddfd8f514634ddad1854c3cd07',
 });
 
 function dropTables() {
@@ -33,7 +33,7 @@ function createTables() {
       const moviesValues = movies.reduce((acc, elem) => {
         acc.push(client.query('INSERT INTO movies(movie, director, rating, run_time, box_office, year) VALUES\
         ($1, $2, $3, $4, $5, $6);',
-        [elem.Movie, elem.Director, elem.Rating, elem.Runtime, elem.BoxOffice, elem.Year]));
+          [elem.Movie, elem.Director, elem.Rating, elem.Runtime, elem.BoxOffice, elem.Year]));
         return acc;
       }, []);
       return Promise.all(moviesValues);
