@@ -14,8 +14,6 @@ const putActorSchema = joi.object().keys({
   alias: joi.string(),
 });
 
-const idSchema = joi.number().integer().required();
-
 const putMovieSchema = joi.object().keys({
   movie: joi.string(),
   director: joi.string(),
@@ -43,7 +41,6 @@ const userSchema = joi.object().keys({
 module.exports = {
   putActorSchema,
   postActorSchema,
-  idSchema,
   putMovieSchema,
   postMovieSchema,
   userSchema,

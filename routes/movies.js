@@ -13,44 +13,44 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   db.getMovies()
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/:mname', (req, res, next) => {
   db.getMovie(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/rating/:mname', (req, res, next) => {
   db.getRating(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/runtime/:mname', (req, res, next) => {
   db.getRunTime(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/director/:mname', (req, res, next) => {
   db.getDirector(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/bocollection/:mname', (req, res, next) => {
   db.getBOCollection(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/year/:mname', (req, res, next) => {
   db.getYear(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 
 // Movies DELETE
 router.delete('/:mname', checkAuth, (req, res, next) => {
   db.deleteMovie(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 
 // Movies POST
@@ -61,7 +61,7 @@ router.post('/', checkAuth, (req, res, next) => {
     } else {
       db.postMovie(req.body)
         .then((resolve) => res.send(resolve.rows))
-        .catch(next());
+        .catch(next);
     }
   });
 });
@@ -75,31 +75,25 @@ router.put('/:id', checkAuth, (req, res, next) => {
           if (err) {
             res.status(422).send(err.details[0].message);
           } else {
-            joi.validate(req.params.id, validation.idSchema, (err1, value1) => {
-              if (err1) {
-                res.status(400).send(err1.details[0].message);
-              } else {
-                db.putMovie(req.body, req.params.id)
-                  .then((resolve) => res.send(resolve.rows))
-                  .catch(next());
-              }
-            });
+            db.putMovie(req.body, req.params.id)
+              .then((resolve) => res.send(resolve.rows))
+              .catch(next);
           }
         });
       } else {
         return res.status(422).json({
-          message: 'Incorrect ID!!',
+          error: 'Incorrect ID!!',
         });
       }
     })
-    .catch(next());
+    .catch(next);
 });
 
 // Relational GET
 router.get('/:mname/actors', (req, res, next) => {
   db.getMovieActors(req.params.mname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 
 module.exports = router;

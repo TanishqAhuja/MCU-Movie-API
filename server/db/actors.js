@@ -4,6 +4,7 @@ const { client } = require('./credentials');
 module.exports = {
   // Actors GET
   getActors() {
+    // return Promise.reject('Soemthing');
     return client.query('select * from actors;');
   },
   getActor(aName) {

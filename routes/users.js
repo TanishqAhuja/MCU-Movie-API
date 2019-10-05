@@ -4,6 +4,7 @@ const express = require('express');
 const joi = require('joi');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const environment = require('../config');
 const db = require('../server/db/users');
 const validation = require('../config/validation');
 
@@ -34,7 +35,7 @@ router.post('/signup', (req, res) => {
         });
       } else {
         return res.status(409).json({
-          message: 'Credentials already Exist!!',
+          error: 'Credentials already Exist!!',
         });
       }
     });
@@ -45,13 +46,13 @@ router.post('/login/:username', (req, res) => {
     .then((user) => {
       if (user.rows.length === 0) {
         return res.status(401).json({
-          message: 'Auth Failed',
+          error: 'Auth Failed',
         });
       }
       bcrypt.compare(req.body.password, user.rows[0].password, (err, response) => {
         if (err) {
           return res.status(401).json({
-            message: 'Auth Failed',
+            error: 'Auth Failed',
           });
         }
         if (response) {
@@ -59,15 +60,14 @@ router.post('/login/:username', (req, res) => {
             email: user.rows[0].email,
             username: user.rows[0].username,
           };
-          const SECRET = 'ABCD_efgh_XYZ';
-          const token = jwt.sign(payload, SECRET, { expiresIn: '7d' });
+          const token = jwt.sign(payload, environment.secret, { expiresIn: '7d' });
           return res.json({
-            message: 'Auth Successful',
+            error: 'Auth Successful',
             token,
           });
         }
         res.status(401).json({
-          message: 'Auth Failed',
+          error: 'Auth Failed',
         });
       });
     })

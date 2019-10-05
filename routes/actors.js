@@ -15,35 +15,35 @@ router.use(express.urlencoded({ extended: false }));
 // Actors GET
 router.get('/', (req, res, next) => {
   db.getActors()
-    .then((resolve) => res.send(resolve.rows));
-  // .catch(next());
+    .then((resolve) => res.send(resolve.rows))
+    .catch((err) => next(err));
 });
 router.get('/:aname', (req, res, next) => {
   db.getActor(req.params.aname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/networth/:aname', (req, res, next) => {
   db.getNetworth(req.params.aname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/age/:aname', (req, res, next) => {
   db.getAge(req.params.aname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 router.get('/alias/:aname', (req, res, next) => {
   db.getAlias(req.params.aname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 
 // Actors DELETE
 router.delete('/:aname', checkAuth, (req, res, next) => {
   db.deleteActor(req.params.aname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 
 // Actors POST
@@ -54,7 +54,7 @@ router.post('/', checkAuth, (req, res, next) => {
     } else {
       db.postActor(req.body)
         .then((resolve) => res.send(resolve.rows))
-        .catch(next());
+        .catch(next);
     }
   });
 });
@@ -68,15 +68,9 @@ router.put('/:id', checkAuth, (req, res, next) => {
           if (err) {
             res.status(422).send(err.details[0].message);
           } else {
-            joi.validate(req.params.id, validation.idSchema, (err1, value1) => {
-              if (err1) {
-                res.status(400).send(err1.details[0].message);
-              } else {
-                db.putActor(req.body, req.params.id)
-                  .then((resolve) => res.send(resolve.rows))
-                  .catch(next());
-              }
-            });
+            db.putActor(req.body, req.params.id)
+              .then((resolve) => res.send(resolve.rows))
+              .catch(next);
           }
         });
       } else {
@@ -85,14 +79,14 @@ router.put('/:id', checkAuth, (req, res, next) => {
         });
       }
     })
-    .catch(next());
+    .catch(next);
 });
 
 // Relational GET
 router.get('/:aname/movies', (req, res, next) => {
   db.getActorMovies(req.params.aname)
     .then((resolve) => res.send(resolve.rows))
-    .catch(next());
+    .catch(next);
 });
 
 module.exports = router;

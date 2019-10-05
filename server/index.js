@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-console */
 const express = require('express');
 const logger = require('../config/winston');
@@ -12,12 +13,16 @@ app.use((req, res, next) => {
 
 app.use(require('../routes'));
 
-app.use('*', (err, res) => {
-  if (err) {
-    res.status(404).json({
-      message: 'requested URL not found!!',
-    });
+app.use('*', (err, req, res, next) => {
+  if (res.headersSent) {
+    return next(err);
   }
+  if (err) {
+    console.log(err);
+  }
+  res.status(404).json({
+    error: 'requested URL not found!!',
+  });
 });
 
 app.listen((process.env.PORT || port), () => logger.info('Listening...'));
